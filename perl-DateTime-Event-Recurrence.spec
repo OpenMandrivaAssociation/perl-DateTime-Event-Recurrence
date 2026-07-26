@@ -1,15 +1,13 @@
 %define upstream_name    DateTime-Event-Recurrence
-%define upstream_version 0.19
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.19
+Release:	2
 
 Summary:	DateTime::Set extension for create basic recurrence sets
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/fglock/DateTime-Event-Recurrence
-Source0:	https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/DateTime-Event-Recurrence-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/F/FG/FGLOCK/DateTime-Event-Recurrence-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ This module provides convenience methods that let you easily create
 "every Monday, Wednesday and Thursday at 10:00 AM and 2:00 PM".
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
